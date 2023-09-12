@@ -16,7 +16,7 @@ public class PickUp_DoorHandler : MonoBehaviour
     
     public otthers _others;
 
-
+    public AudioSource Ad;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -164,7 +164,7 @@ public class PickUp_DoorHandler : MonoBehaviour
                 _otherGA.transform.parent.GetComponent<Collider2D>().enabled = false;
                 _canPressforOpne = true;
                 _hasAccess = false;
-
+                Ad.Play();
                 //Debug.LogError(transform.parent.name);
             }
             else
